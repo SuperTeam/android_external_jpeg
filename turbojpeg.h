@@ -463,6 +463,9 @@ DLLEXPORT int DLLCALL tjCompress2(tjhandle handle, unsigned char *srcBuf,
   int width, int pitch, int height, int pixelFormat, unsigned char **jpegBuf,
   unsigned long *jpegSize, int jpegSubsamp, int jpegQual, int flags);
 
+DLLEXPORT int DLLCALL tjCompressRGB2YUV420WithMark(tjhandle handle, unsigned char *srcBuf,
+	int width, int height, unsigned char **jpegBuf,unsigned long *jpegSize, int jpegQual,
+	 unsigned char*markstr,int marksize );
 
 /**
  * The maximum size of the buffer (in bytes) required to hold a JPEG image with
